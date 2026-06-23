@@ -1,0 +1,22 @@
+command:
+  - "uvicorn"
+  - "app:app"
+  - "--host"
+  - "0.0.0.0"
+  - "--port"
+  - "8000"
+
+# NOTE: deploy.sh / scripts/setup_workspace.py regenerate this file with the
+# catalog, schema, warehouse, model, and jobs dir you pass at deploy time.
+# The values below are placeholders for reference / local runs only.
+env:
+  - name: CATALOG
+    value: "main"
+  - name: SCHEMA
+    value: "vehicle_upsell"
+  - name: WAREHOUSE_ID
+    value: "<your-sql-warehouse-id>"
+  - name: DEFAULT_MODEL
+    value: "databricks-claude-sonnet-4-6"
+  - name: JOBS_WORKSPACE_DIR
+    value: "/Workspace/Users/<you>/vehicle-upsell-studio_jobs"

@@ -1,0 +1,17 @@
+[project]
+name = "vehicle-upsell-studio"
+version = "0.1.0"
+description = "Self-service prompt-config builder for vehicle service upsell analysis on Databricks"
+requires-python = ">=3.11"
+dependencies = [
+    "fastapi>=0.115.0",
+    "uvicorn[standard]>=0.30.0",
+    "databricks-sdk>=0.40.0",
+    "openai>=1.40.0",
+    "pydantic>=2.0.0",
+    "python-multipart>=0.0.9",
+]
+
+[tool.setuptools]
+py-modules = ["app"]
+packages = ["server", "server.routes"]
